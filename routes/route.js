@@ -32,7 +32,7 @@ rout.post('/login', async (req, res) => {
 
 rout.post('/signup', check(
     'pass',
-    'Please enter a password with 6 or more characters'
+    'Please enter a password with 7 or more characters'
 ).isLength({ min: 7 }), async (req, res) => {
 
     const errors = validationResult(req);
